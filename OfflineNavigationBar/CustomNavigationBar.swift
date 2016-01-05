@@ -7,9 +7,12 @@ class CustomNavigationBar: UINavigationBar {
         didSet {
             guard message != oldValue else { return }
 
+                self.invalidateIntrinsicContentSize()
+                self.layoutIfNeeded()
             UIView.animateWithDuration(1) { [unowned self] in
                 self.messageLabel.text = self.message
                 self.messageLabel.hidden = (self.message == nil)
+                // http://www.emdentec.com/blog/2014/2/25/hacking-uinavigationbar
                 self.transform = CGAffineTransformMakeTranslation(0, -self.messageHeight)
                 if self.message != nil {
                     var newFrame = self.frame
@@ -20,7 +23,6 @@ class CustomNavigationBar: UINavigationBar {
                     newFrame.size.height -= self.messageHeightWhenVisible
                     self.frame = newFrame
                 }
-                self.layoutIfNeeded()
             }
         }
     }
@@ -38,6 +40,10 @@ class CustomNavigationBar: UINavigationBar {
         label.backgroundColor = UIColor(red: 43/255, green: 172/255, blue: 218/255, alpha: 1)
         label.textColor = UIColor.whiteColor()
         return label
+    }()
+
+    private lazy var timer: NSTimer = {
+        return NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "timerFired", userInfo: nil, repeats: true)
     }()
 
     override func sizeThatFits(size: CGSize) -> CGSize {
@@ -65,9 +71,22 @@ class CustomNavigationBar: UINavigationBar {
         initialize()
     }
 
+    deinit {
+        timer.invalidate()
+    }
+
     func initialize() {
-        layer.borderWidth = 2
+//        layer.borderWidth = 2
 //        addSubview(messageLabel)
         insertSubview(messageLabel, atIndex: 0)
+        timer.fire()
+    }
+
+    func timerFired() {
+        if message != nil {
+            message = nil
+        } else {
+            message = "You are offline"
+        }
     }
 }

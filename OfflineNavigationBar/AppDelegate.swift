@@ -13,23 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func timerFired() {
-        let navBar = self.navBar()
-        if navBar.message != nil {
-            navBar.message = nil
-        } else {
-            navBar.message = "You are offline"
-        }
-    }
-
-    func navBar() -> CustomNavigationBar {
-        let navigationControler = window!.rootViewController as! UINavigationController
-        return navigationControler.navigationBar as! CustomNavigationBar
-    }
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "timerFired", userInfo: nil, repeats: true).fire()
         return true
     }
 

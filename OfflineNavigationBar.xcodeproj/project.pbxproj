@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1046B6C1C3C09E400555B76 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1046B6B1C3C09E400555B76 /* CustomNavigationController.swift */; };
 		E1E8F1D41C3BAADB00E54066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F1D31C3BAADB00E54066 /* AppDelegate.swift */; };
 		E1E8F1D61C3BAADB00E54066 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F1D51C3BAADB00E54066 /* MasterViewController.swift */; };
 		E1E8F1D81C3BAADB00E54066 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F1D71C3BAADB00E54066 /* DetailViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1046B6B1C3C09E400555B76 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		E1E8F1D01C3BAADB00E54066 /* OfflineNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E8F1D31C3BAADB00E54066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E8F1D51C3BAADB00E54066 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E1E8F1D71C3BAADB00E54066 /* DetailViewController.swift */,
 				E1E8F1D91C3BAADB00E54066 /* Main.storyboard */,
 				E1E8F1E71C3BACCF00E54066 /* CustomNavigationBar.swift */,
+				E1046B6B1C3C09E400555B76 /* CustomNavigationController.swift */,
 				E1E8F1DC1C3BAADB00E54066 /* Assets.xcassets */,
 				E1E8F1DE1C3BAADB00E54066 /* LaunchScreen.storyboard */,
 				E1E8F1E11C3BAADB00E54066 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E8F1E81C3BACCF00E54066 /* CustomNavigationBar.swift in Sources */,
+				E1046B6C1C3C09E400555B76 /* CustomNavigationController.swift in Sources */,
 				E1E8F1D81C3BAADB00E54066 /* DetailViewController.swift in Sources */,
 				E1E8F1D61C3BAADB00E54066 /* MasterViewController.swift in Sources */,
 				E1E8F1D41C3BAADB00E54066 /* AppDelegate.swift in Sources */,
@@ -292,6 +296,7 @@
 				E1E8F1E61C3BAADB00E54066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

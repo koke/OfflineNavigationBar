@@ -9,6 +9,17 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let closeButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "done")
+        navigationItem.rightBarButtonItem = closeButton
+    }
+
+    func done() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
